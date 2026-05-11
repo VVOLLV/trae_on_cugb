@@ -1,0 +1,97 @@
+.reflection-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+.reflection-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+}
+
+.reflection-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.reflection-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.reflection-card.success .reflection-icon {
+  background: rgba(34, 197, 94, 0.15);
+}
+
+.reflection-card.error .reflection-icon {
+  background: rgba(239, 68, 68, 0.15);
+}
+
+.reflection-card.improvement .reflection-icon {
+  background: rgba(245, 158, 11, 0.15);
+}
+
+.reflection-title {
+  font-family: var(--font-display);
+  font-size: var(--text-h3);
+  font-weight: 600;
+}
+
+.reflection-card.success .reflection-title {
+  color: var(--success);
+}
+
+.reflection-card.error .reflection-title {
+  color: var(--error);
+}
+
+.reflection-card.improvement .reflection-title {
+  color: var(--improvement);
+}
+
+.reflection-list {
+  list-style: none;
+}
+
+.reflection-list li {
+  position: relative;
+  padding-left: var(--space-md);
+  margin-bottom: var(--space-sm);
+  font-size: var(--text-small);
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.reflection-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.reflection-card.success .reflection-list li::before {
+  background: var(--success);
+}
+
+.reflection-card.error .reflection-list li::before {
+  background: var(--error);
+}
+
+.reflection-card.improvement .reflection-list li::before {
+  background: var(--improvement);
+}

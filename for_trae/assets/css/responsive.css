@@ -1,0 +1,34 @@
+@media (max-width: 767px) {
+  .hero-stats {
+    gap: var(--space-sm);
+  }
+  
+  .stat-item {
+    min-width: 100px;
+    padding: var(--space-sm) var(--space-md);
+  }
+  
+  .reflection-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .phase-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .phase-number {
+    font-size: 48px;
+  }
+  
+  .rods-table {
+    display: block;
+    overflow-x: auto;
+  }
+  
+  .rods-table th,
+  .rods-table td {
+    padding: var(--space-sm);
+    font-size: 12px;
+  }
+}

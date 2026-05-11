@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TRAE on Campus @ 中国地质大学（北京）— AI Coding Meetup 活动回顾">
+  <title>TRAE on Campus @ CUGB — A Story in Three Months</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/navigation.css">
+  <link rel="stylesheet" href="assets/css/hero.css">
+  <link rel="stylesheet" href="assets/css/timeline.css">
+  <link rel="stylesheet" href="assets/css/phase.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/table.css">
+  <link rel="stylesheet" href="assets/css/reflection.css">
+  <link rel="stylesheet" href="assets/css/about.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/icons.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">TRAE<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="#overview" data-i18n="overview">概述</a></li>
+        <li class="nav-dropdown">
+          <a href="#overview" class="dropdown-trigger" data-i18n="timeline">时间线</a>
+          <ul class="dropdown-menu">
+            <li><a href="#phase01" data-i18n="phase01">申请期</a></li>
+            <li><a href="#phase02" data-i18n="phase02">策划期</a></li>
+            <li><a href="#phase03" data-i18n="phase03">落地期</a></li>
+          </ul>
+        </li>
+        <li><a href="#phase04" data-i18n="reflection">复盘</a></li>
+        <li><a href="#about" data-i18n="about">关于</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="nav-action-btn" data-action="lang-toggle" aria-label="切换语言">
+          <span class="lang-text">EN</span>
+        </button>
+        <button class="nav-action-btn" data-action="theme-toggle" aria-label="切换主题">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+      </div>
+      <button class="nav-toggle" aria-label="菜单">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="nav-mobile">
+      <a href="#overview" data-i18n="overview">概述</a>
+      <a href="#phase01" data-i18n="phase01">申请期</a>
+      <a href="#phase02" data-i18n="phase02">策划期</a>
+      <a href="#phase03" data-i18n="phase03">落地期</a>
+      <a href="#phase04" data-i18n="reflection">复盘期</a>
+      <a href="#about" data-i18n="about">关于</a>
+    </div>
+  </nav>
+
+  <section class="sec-hero" id="hero">
+    <div class="hero-content">
+      <div class="hero-badge">May 10, 2026 · Beijing</div>
+      <h1 class="hero-title">TRAE <span>on</span> Campus <span class="hero-highlight">@中国地质大学（北京）</span></h1>
+      <p class="hero-subtitle">A Story in Three Months</p>
+      
+      <div class="hero-stats">
+        <div class="stat-item fade-in stagger-1">
+          <span class="stat-number" data-count="1">0</span>
+          <span class="stat-label" data-i18n="event_count">场活动</span>
+        </div>
+        <div class="stat-item fade-in stagger-2">
+          <span class="stat-number" data-count="50">0</span>
+          <span class="stat-label" data-i18n="participants">+ 参与者</span>
+        </div>
+        <div class="stat-item fade-in stagger-3">
+          <span class="stat-number" data-count="3">0</span>
+          <span class="stat-label" data-i18n="hours">小时体验</span>
+        </div>
+        <div class="stat-item fade-in stagger-4">
+          <span class="stat-number" data-count="5">0</span>
+          <span class="stat-label" data-i18n="sessions">个环节</span>
+        </div>
+        <div class="stat-item fade-in stagger-5">
+          <span class="stat-number" data-count="50">0</span>
+          <span class="stat-label" data-i18n="days">天筹备</span>
+        </div>
+      </div>
+      
+      <a href="#overview" class="hero-cta">
+        <span data-i18n="startReading">开始阅读</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 5v14M5 12l7 7 7-7"/>
+        </svg>
+      </a>
+    </div>
+    
+    <div class="scroll-indicator">
+      <span data-i18n="scroll">Scroll</span>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 5v14M5 12l7 7 7-7"/>
+      </svg>
+    </div>
+  </section>
+
+  <section class="section" id="overview">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag">Overview</span>
+        <h2 class="section-title">项目概述</h2>
+        <p class="section-desc">一场从零到一的 AI Coding 实践</p>
+      </div>
+      
+      <div class="overview-intro fade-in">
+        <p><strong>TRAE on Campus</strong> 是一场面向高校开发者的 AI Coding Meetup，通过主题分享与动手 Workshop 让参与者零距离体验 AI 原生开发。活动由字节跳动 TRAE 品牌发起的高校巡回计划，中国地质大学（北京）站由校园大使从 0 到 1 独立推进，场地选在北京嘉里中心·星巴克甄选（非校园），提升活动质感与品牌调性。</p>
+      </div>
+      
+      <div class="timeline">
+        <div class="timeline-items">
+          <div class="timeline-item fade-in">
+            <div class="timeline-node"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2026.01 - 02</span>
+              <h3 class="timeline-title">申请期</h3>
+              <p class="timeline-desc">成为校园大使，获得品牌授权与资源支持</p>
+            </div>
+          </div>
+          <div class="timeline-item fade-in">
+            <div class="timeline-node"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2026.03 - 04</span>
+              <h3 class="timeline-title">策划期</h3>
+              <p class="timeline-desc">从模糊想法到完整执行方案的迭代</p>
+            </div>
+          </div>
+          <div class="timeline-item fade-in">
+            <div class="timeline-node"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2026.05.10</span>
+              <h3 class="timeline-title">落地期</h3>
+              <p class="timeline-desc">嘉里中心·星巴克甄选，50+ 参与者到场</p>
+            </div>
+          </div>
+          <div class="timeline-item fade-in">
+            <div class="timeline-node"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2026.05.11+</span>
+              <h3 class="timeline-title">复盘期</h3>
+              <p class="timeline-desc">沉淀经验，为下一站做准备</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="phase01">
+    <div class="container">
+      <div class="phase-header fade-in">
+        <span class="phase-number">01</span>
+        <div class="phase-info">
+          <span class="phase-tag">Phase 01</span>
+          <h2 class="phase-title">申请期</h2>
+          <p class="phase-date">2026 年 1-2 月</p>
+        </div>
+      </div>
+      
+      <div class="phase-narrative fade-in">
+        <h4>故事的开始</h4>
+        <p>2026年初，一个想法在脑海中萌芽：能否让身边的同学也能体验到 AI 辅助编程的魅力？当了解到 TRAE on Campus 校园大使计划时，我意识到这是一个将想法落地的机会。从提交申请材料，到通过审核获得授权，再到与校方沟通合作——每一步都是全新的尝试。这段经历让我学会了如何从零开始推动一个项目，也深刻理解了"想做"与"做成"之间的距离。</p>
+      </div>
+      
+      <div class="decision-cards">
+        <div class="decision-card fade-in stagger-1">
+          <div class="decision-icon">🎯</div>
+          <h3 class="decision-title">成为校园大使</h3>
+          <p class="decision-desc">主动申请 TRAE on Campus 校园大使，获得品牌授权与资源支持，开启独立推进活动的第一步。</p>
+        </div>
+        <div class="decision-card fade-in stagger-2">
+          <div class="decision-icon">💡</div>
+          <h3 class="decision-title">确定活动定位</h3>
+          <p class="decision-desc">选择 AI Coding Meetup 形式，聚焦动手实践而非单向宣讲，让参与者真正动手体验 TRAE 的强大。</p>
+        </div>
+        <div class="decision-card fade-in stagger-3">
+          <div class="decision-icon">📬</div>
+          <h3 class="decision-title">合作邀请函</h3>
+          <p class="decision-desc">制作并向校方提交《TRAE on Campus @ 中国地质大学 合作邀请函》，打通校方审批链路，获得官方支持。</p>
+        </div>
+      </div>
+      
+      <div class="placeholder-img fade-in" style="margin-top: var(--space-lg);">
+        <span>占位图 · 1200×400</span>
+        <small>申请材料截图 / 合作邀请函 · 待上传</small>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="phase02">
+    <div class="container">
+      <div class="phase-header fade-in">
+        <span class="phase-number">02</span>
+        <div class="phase-info">
+          <span class="phase-tag">Phase 02</span>
+          <h2 class="phase-title">策划期</h2>
+          <p class="phase-date">2026 年 3-4 月</p>
+        </div>
+      </div>
+      
+      <div class="iteration-block fade-in">
+        <div class="iteration-header">
+          <span class="iteration-badge before">Before</span>
+          <span>模糊的「AI 分享会」</span>
+        </div>
+        <div class="iteration-content">
+          <span class="iteration-badge after">After</span>
+          <span>结构化的「主题分享 + Q&A + Workshop + 茶歇」四段式</span>
+        </div>
+      </div>
+      
+      <div class="iteration-block fade-in">
+        <div class="iteration-header">
+          <span class="iteration-badge before">Before</span>
+          <span>校内教室</span>
+        </div>
+        <div class="iteration-content">
+          <span class="iteration-badge after">After</span>
+          <span>嘉里中心星巴克甄选（提升品牌调性）</span>
+        </div>
+      </div>
+      
+      <div class="iteration-block fade-in">
+        <div class="iteration-header">
+          <span class="iteration-badge before">Before</span>
+          <span>讲师制</span>
+        </div>
+        <div class="iteration-content">
+          <span class="iteration-badge after">After</span>
+          <span>校园大使亲自主持 + TRAE 官方远程支持</span>
+        </div>
+      </div>
+      
+      <div class="phase-narrative fade-in">
+        <h4>策划心得</h4>
+        <p>这两个月是思维碰撞最密集的时期。每一次方案迭代都源于一个核心问题：参与者真正需要什么？答案是：动手实践的机会。于是 Workshop 成为活动的核心环节，而场地选择也从校内教室升级到嘉里中心星巴克甄选——一个更能激发"专业感"与"仪式感"的空间。团队分工上，校园大使统筹全流程：场地、物料、宣传、主持、现场控场，每个环节都需要精心打磨。</p>
+      </div>
+      
+      <div class="deliverables-grid fade-in">
+        <div class="deliverable-item">
+          <div class="deliverable-icon">📄</div>
+          <div class="deliverable-info">
+            <span class="deliverable-name">合作邀请函</span>
+            <span class="deliverable-type">PDF · 校方审批用</span>
+          </div>
+        </div>
+        <div class="deliverable-item">
+          <div class="deliverable-icon">🖼️</div>
+          <div class="deliverable-info">
+            <span class="deliverable-name">线上宣传物料</span>
+            <span class="deliverable-type">PNG 海报 × 3</span>
+          </div>
+        </div>
+        <div class="deliverable-item">
+          <div class="deliverable-icon">📋</div>
+          <div class="deliverable-info">
+            <span class="deliverable-name">主持手卡</span>
+            <span class="deliverable-type">PDF · 含 Plan B</span>
+          </div>
+        </div>
+        <div class="deliverable-item">
+          <div class="deliverable-icon">📽️</div>
+          <div class="deliverable-info">
+            <span class="deliverable-name">PPT 模版</span>
+            <span class="deliverable-type">PPTX · 品牌标准</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="placeholder-img fade-in" style="margin-top: var(--space-lg);">
+        <span>占位图 · 1200×400</span>
+        <small>策划文档截图 / 宣传物料展示 · 待上传</small>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="phase03">
+    <div class="container">
+      <div class="phase-header fade-in">
+        <span class="phase-number">03</span>
+        <div class="phase-info">
+          <span class="phase-tag">Phase 03</span>
+          <h2 class="phase-title">落地期</h2>
+          <p class="phase-date">2026 年 5 月 10 日 · 北京嘉里中心·星巴克甄选</p>
+        </div>
+      </div>
+      
+      <div class="phase-narrative fade-in">
+        <h4>活动当天</h4>
+        <p>这一天终于来了。从13:30入场签到，到16:30合影收尾，三个小时的活动中，每一个环节都按计划推进。参与者们现场安装 TRAE IDE，动手完成 Coding Battle，并向 GitHub 提交代码——这正是我们想要创造的体验：不是听一场演讲，而是真正动手感受 AI 辅助编程的力量。</p>
+      </div>
+      
+      <table class="rods-table fade-in">
+        <thead>
+          <tr>
+            <th>时间</th>
+            <th>环节</th>
+            <th>内容</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="time">13:30-14:00</td>
+            <td class="session">签到 & 准备</td>
+            <td class="detail">签到入场、连接 WiFi、安装 TRAE IDE、自由交流</td>
+          </tr>
+          <tr>
+            <td class="time">14:00-14:10</td>
+            <td class="session">开场</td>
+            <td class="detail">活动定位介绍，TRAE Chatbot 快速演示</td>
+          </tr>
+          <tr>
+            <td class="time">14:10-14:40</td>
+            <td class="session">主题分享</td>
+            <td class="detail">"Ship faster with TRAE" AI Coding 主题演讲</td>
+          </tr>
+          <tr>
+            <td class="time">14:40-15:00</td>
+            <td class="session">Q&A · 第一轮</td>
+            <td class="detail">围绕 TRAE 使用体验 & AI Coding 趋势讨论</td>
+          </tr>
+          <tr>
+            <td class="time">15:00-15:30</td>
+            <td class="session">Workshop</td>
+            <td class="detail">STEP1 环境配置 → STEP2 TRAE 体验 → STEP3 Coding Battle → STEP4 GitHub 提交</td>
+          </tr>
+          <tr>
+            <td class="time">15:30-15:50</td>
+            <td class="session">Q&A + SOLO</td>
+            <td class="detail">第二轮答疑 + TRAE SOLO 产品介绍</td>
+          </tr>
+          <tr>
+            <td class="time">15:50-16:10</td>
+            <td class="session">Coffee Break</td>
+            <td class="detail">自由交流、茶歇、社群互动</td>
+          </tr>
+          <tr>
+            <td class="time">16:10-16:30</td>
+            <td class="session">收尾</td>
+            <td class="detail">活动总结、合影、后续社群运营安排</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <div class="plan-b-section fade-in">
+        <h4>🛟 Plan B 备用方案</h4>
+        <ul class="plan-b-list">
+          <li>HDMI 连接故障预案</li>
+          <li>环节时长弹性调整机制</li>
+          <li>Workshop 难度按参与者水平浮动</li>
+          <li>场地/座位调整方案</li>
+        </ul>
+      </div>
+      
+      <div class="placeholder-img fade-in" style="margin-top: var(--space-lg);">
+        <span>占位图 · 1200×600</span>
+        <small>活动现场照片 · 待上传（建议 10-20 张）</small>
+      </div>
+      
+      <div class="phase-narrative fade-in" style="margin-top: var(--space-lg);">
+        <h4>参与者反馈</h4>
+        <p><em>[待填写：1-3 条参与者原话]</em></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="phase04">
+    <div class="container">
+      <div class="phase-header fade-in">
+        <span class="phase-number">04</span>
+        <div class="phase-info">
+          <span class="phase-tag">Phase 04</span>
+          <h2 class="phase-title">复盘期</h2>
+          <p class="phase-date">2026 年 5 月 11 日起</p>
+        </div>
+      </div>
+      
+      <div class="reflection-grid">
+        <div class="reflection-card success fade-in stagger-1">
+          <div class="reflection-header">
+            <div class="reflection-icon">✅</div>
+            <h3 class="reflection-title">做对了</h3>
+          </div>
+          <ul class="reflection-list">
+            <li>[待填写]</li>
+            <li>[待填写]</li>
+            <li>[待填写]</li>
+            <li>[待填写]</li>
+            <li>[待填写]</li>
+          </ul>
+        </div>
+        
+        <div class="reflection-card error fade-in stagger-2">
+          <div class="reflection-header">
+            <div class="reflection-icon">❌</div>
+            <h3 class="reflection-title">做错了</h3>
+          </div>
+          <ul class="reflection-list">
+            <li>[待填写]</li>
+            <li>[待填写]</li>
+            <li>[待填写]</li>
+            <li>[待填写]</li>
+            <li>[待填写]</li>
+          </ul>
+        </div>
+        
+        <div class="reflection-card improvement fade-in stagger-3">
+          <div class="reflection-header">
+            <div class="reflection-icon">🔁</div>
+            <h3 class="reflection-title">改进方向</h3>
+          </div>
+          <ul class="reflection-list">
+            <li>[待填写]</li>
+            <li>[待填写]</li>
+            <li>[待填写]</li>
+            <li>[待填写]</li>
+            <li>[待填写]</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="overview-intro fade-in" style="margin-top: var(--space-xl);">
+        <p><strong>量化成果</strong></p>
+        <p>实际到场人数：<em>[待填写]</em><br>
+        Workshop 完成率：<em>[待填写]</em><br>
+        社群新增：<em>[待填写]</em></p>
+      </div>
+      
+      <div class="phase-narrative fade-in" style="margin-top: var(--space-lg);">
+        <h4>个人成长感悟</h4>
+        <p><em>[待填写：100-200 字个人感悟]</em></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="highlights">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag">Highlights</span>
+        <h2 class="section-title">精选瞬间</h2>
+        <p class="section-desc">那些值得被定格的画面</p>
+      </div>
+      
+      <div class="highlights-grid">
+        <div class="highlight-card fade-in stagger-1">
+          <div class="highlight-img placeholder-img">
+            <span>1200×750</span>
+            <small>活动现场全景</small>
+          </div>
+          <div class="highlight-content">
+            <h3 class="highlight-title">Workshop 现场</h3>
+            <p class="highlight-quote">"大家都在认真配置环境，这是最让我欣慰的画面。"</p>
+          </div>
+        </div>
+        
+        <div class="highlight-card fade-in stagger-2">
+          <div class="highlight-img placeholder-img">
+            <span>1200×750</span>
+            <small>团队合影</small>
+          </div>
+          <div class="highlight-content">
+            <h3 class="highlight-title">活动结束合影</h3>
+            <p class="highlight-quote">[待填写：金句摘录]</p>
+          </div>
+        </div>
+        
+        <div class="highlight-card fade-in stagger-3">
+          <div class="highlight-img placeholder-img">
+            <span>1200×750</span>
+            <small>Coffee Break 交流</small>
+          </div>
+          <div class="highlight-content">
+            <h3 class="highlight-title">茶歇时光</h3>
+            <p class="highlight-quote">[待填写：金句摘录]</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section sec-about" id="about">
+    <div class="container">
+      <div class="about-content fade-in">
+        <div class="about-logo">TRAE<span>.</span></div>
+        <p class="about-brand"><strong>TRAE on Campus — AI Coding Meetup</strong><br>一场让高校开发者零距离体验 AI 原生开发的活动</p>
+        
+        <div class="about-info">
+          <div class="about-info-item">
+            <span class="about-info-label">活动日期</span>
+            <span class="about-info-value">2026 年 5 月 10 日</span>
+          </div>
+          <div class="about-info-item">
+            <span class="about-info-label">活动地点</span>
+            <span class="about-info-value">北京嘉里中心·星巴克甄选</span>
+          </div>
+          <div class="about-info-item">
+            <span class="about-info-label">活动主题</span>
+            <span class="about-info-value">Ship faster with TRAE</span>
+          </div>
+          <div class="about-info-item">
+            <span class="about-info-label">参与规模</span>
+            <span class="about-info-value">50+ 人</span>
+          </div>
+        </div>
+        
+        <div class="about-credits">
+          <h4>特别鸣谢</h4>
+          <p>感谢 TRAE 官方团队的大力支持，以及所有参与者的热情投入。本次活动由 TRAE 校园大使独立推进完成。</p>
+        </div>
+      </div>
+      
+      <footer class="footer">
+        <p>© 2026 TRAE on Campus @ CUGB</p>
+      </footer>
+    </div>
+  </section>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/scroll.js"></script>
+  <script src="assets/js/counter.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/i18n.js"></script>
+</body>
+</html>

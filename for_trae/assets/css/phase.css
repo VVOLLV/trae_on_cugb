@@ -1,0 +1,57 @@
+.phase-section {
+  padding: var(--space-xl) 0;
+}
+
+.phase-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.phase-number {
+  font-family: var(--font-mono);
+  font-size: clamp(48px, 6vw, 72px);
+  font-weight: 700;
+  color: var(--accent-light);
+  line-height: 1;
+}
+
+.phase-info {
+  flex: 1;
+}
+
+.phase-tag {
+  font-family: var(--font-mono);
+  font-size: var(--text-small);
+  color: var(--accent-primary);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.phase-title {
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  font-weight: 700;
+}
+
+.phase-date {
+  font-size: var(--text-small);
+  color: var(--text-muted);
+  margin-top: var(--space-xs);
+}
+
+.phase-narrative {
+  background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-secondary) 100%);
+  border-left: 4px solid var(--accent-primary);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  padding: var(--space-lg);
+  margin: var(--space-lg) 0;
+}
+
+.phase-narrative h4 {
+  font-family: var(--font-display);
+  font-size: var(--text-h3);
+  color: var(--accent-primary);
+  margin-bottom: var(--space-sm);
+}

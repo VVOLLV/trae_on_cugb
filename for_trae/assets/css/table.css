@@ -1,0 +1,47 @@
+.rods-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin: var(--space-lg) 0;
+}
+
+.rods-table th,
+.rods-table td {
+  padding: var(--space-md);
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.rods-table th {
+  background: var(--bg-secondary);
+  font-family: var(--font-mono);
+  font-size: var(--text-small);
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.rods-table td {
+  font-size: var(--text-small);
+}
+
+.rods-table tr:last-child td {
+  border-bottom: none;
+}
+
+.rods-table .time {
+  font-family: var(--font-mono);
+  color: var(--accent-primary);
+  white-space: nowrap;
+}
+
+.rods-table .session {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.rods-table .detail {
+  color: var(--text-secondary);
+}
