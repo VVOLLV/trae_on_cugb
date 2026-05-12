@@ -34,6 +34,9 @@
   --space-md: 24px;
   --space-lg: 48px;
   --space-xl: 80px;
+  --space-2xl: 96px;
+  --space-3xl: 128px;
+  --space-4xl: 160px;
   --space-xxl: 120px;
   
   --radius-sm: 6px;
@@ -45,7 +48,8 @@
   --transition-slow: 0.5s ease;
   
   --max-width: 1200px;
-  --nav-height: 64px;
+  --nav-height: 56px;
+  --top-bar-height: 36px;
 }
 
 @media (max-width: 767px) {
@@ -53,6 +57,7 @@
     --space-lg: 32px;
     --space-xl: 56px;
     --space-xxl: 80px;
-    --nav-height: 56px;
+    --nav-height: 52px;
+    --top-bar-height: 0px;
   }
 }

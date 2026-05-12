@@ -19,22 +19,63 @@
   <link rel="stylesheet" href="assets/css/table.css">
   <link rel="stylesheet" href="assets/css/reflection.css">
   <link rel="stylesheet" href="assets/css/about.css">
+  <link rel="stylesheet" href="assets/css/reveal.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
   <link rel="stylesheet" href="assets/css/icons.css">
 </head>
 <body>
-  <nav class="nav">
+  <!-- ===== Top Bar ===== -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <a href="#" class="top-logo">TRAE on Campus @中国地质大学（北京）</a>
+      <nav class="utility-nav" aria-label="Utility navigation">
+        <ul>
+          <li><a href="#overview" data-i18n="overview">概述</a></li>
+          <li><a href="#phase04" data-i18n="reflection">复盘</a></li>
+          <li><a href="#about" data-i18n="about">关于</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ===== Main Navigation ===== -->
+  <nav class="nav" id="main-nav">
     <div class="nav-inner">
       <a href="#" class="nav-logo">TRAE<span>.</span></a>
       <ul class="nav-links">
         <li><a href="#overview" data-i18n="overview">概述</a></li>
         <li class="nav-dropdown">
           <a href="#overview" class="dropdown-trigger" data-i18n="timeline">时间线</a>
-          <ul class="dropdown-menu">
-            <li><a href="#phase01" data-i18n="phase01">申请期</a></li>
-            <li><a href="#phase02" data-i18n="phase02">策划期</a></li>
-            <li><a href="#phase03" data-i18n="phase03">落地期</a></li>
-          </ul>
+          <div class="dropdown-menu timeline-dropdown">
+            <div class="dropdown-inner">
+              <div class="dropdown-col">
+                <h4 data-i18n="nav_phases">活动阶段</h4>
+                <ul>
+                  <li><a href="#phase01" data-i18n="phase01">申请期</a></li>
+                  <li><a href="#phase02" data-i18n="phase02">策划期</a></li>
+                  <li><a href="#phase03" data-i18n="phase03">落地期</a></li>
+                </ul>
+              </div>
+              <div class="dropdown-col">
+                <h4 data-i18n="nav_deliverables">关键交付物</h4>
+                <ul>
+                  <li><a href="#phase02">合作邀请函</a></li>
+                  <li><a href="#phase02">宣传物料</a></li>
+                  <li><a href="#phase02">主持手卡</a></li>
+                  <li><a href="#phase02">PPT 模版</a></li>
+                </ul>
+              </div>
+              <div class="dropdown-col">
+                <h4 data-i18n="nav_flow">活动流程</h4>
+                <ul>
+                  <li><a href="#phase03">签到 &amp; 开场</a></li>
+                  <li><a href="#phase03">主题分享</a></li>
+                  <li><a href="#phase03">Workshop</a></li>
+                  <li><a href="#phase03">Coffee Break</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </li>
         <li><a href="#phase04" data-i18n="reflection">复盘</a></li>
         <li><a href="#about" data-i18n="about">关于</a></li>
@@ -76,49 +117,94 @@
     </div>
   </nav>
 
-  <section class="sec-hero" id="hero">
-    <div class="hero-content">
-      <div class="hero-badge">May 10, 2026 · Beijing</div>
-      <h1 class="hero-title">TRAE <span>on</span> Campus <span class="hero-highlight">@中国地质大学（北京）</span></h1>
-      <p class="hero-subtitle">A Story in Three Months</p>
-      
-      <div class="hero-stats">
-        <div class="stat-item fade-in stagger-1">
-          <span class="stat-number" data-count="1">0</span>
-          <span class="stat-label" data-i18n="event_count">场活动</span>
-        </div>
-        <div class="stat-item fade-in stagger-2">
-          <span class="stat-number" data-count="50">0</span>
-          <span class="stat-label" data-i18n="participants">+ 参与者</span>
-        </div>
-        <div class="stat-item fade-in stagger-3">
-          <span class="stat-number" data-count="3">0</span>
-          <span class="stat-label" data-i18n="hours">小时体验</span>
-        </div>
-        <div class="stat-item fade-in stagger-4">
-          <span class="stat-number" data-count="5">0</span>
-          <span class="stat-label" data-i18n="sessions">个环节</span>
-        </div>
-        <div class="stat-item fade-in stagger-5">
-          <span class="stat-number" data-count="50">0</span>
-          <span class="stat-label" data-i18n="days">天筹备</span>
+  <!-- ===== 揭开效果容器 ===== -->
+  <div class="page-container" id="page-container">
+
+    <!-- 层1：Footer（下层，静止钉在底部） -->
+    <div class="footer-layer">
+      <div class="footer-content">
+        <div class="container">
+          <div class="about-content">
+            <div class="about-logo">TRAE<span>.</span></div>
+            <p class="about-brand"><strong>TRAE on Campus — AI Coding Meetup</strong><br>一场让高校开发者零距离体验 AI 原生开发的活动</p>
+
+            <div class="about-info">
+              <div class="about-info-item">
+                <span class="about-info-label">活动日期</span>
+                <span class="about-info-value">2026 年 5 月 10 日</span>
+              </div>
+              <div class="about-info-item">
+                <span class="about-info-label">活动地点</span>
+                <span class="about-info-value">北京嘉里中心·星巴克甄选</span>
+              </div>
+              <div class="about-info-item">
+                <span class="about-info-label">活动主题</span>
+                <span class="about-info-value">Ship faster with TRAE</span>
+              </div>
+              <div class="about-info-item">
+                <span class="about-info-label">参与规模</span>
+                <span class="about-info-value">50+ 人</span>
+              </div>
+            </div>
+
+            <div class="about-credits">
+              <h4>特别鸣谢</h4>
+              <p>感谢 TRAE 官方团队的大力支持，以及所有参与者的热情投入。本次活动由 TRAE 校园大使独立推进完成。</p>
+            </div>
+          </div>
+
+          <footer class="footer-layer-bottom">
+            <p>© 2026 TRAE on Campus @ CUGB</p>
+          </footer>
         </div>
       </div>
-      
-      <a href="#overview" class="hero-cta">
-        <span data-i18n="startReading">开始阅读</span>
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M12 5v14M5 12l7 7 7-7"/>
-        </svg>
-      </a>
     </div>
-    
-    <div class="scroll-indicator">
-      <span data-i18n="scroll">Scroll</span>
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M12 5v14M5 12l7 7 7-7"/>
-      </svg>
+
+    <!-- 层2：主内容（上层，向上滚动揭开） -->
+    <div class="main-layer" id="main-layer">
+
+      <section class="sec-hero" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="container">
+        <div class="hero-badge">May 10, 2026 · Beijing</div>
+        <h1 class="hero-title">TRAE <span>on</span> Campus <span class="hero-highlight">@中国地质大学（北京）</span></h1>
+        <p class="hero-desc">TRAE on Campus 是字节跳动旗下 AI 编程产品——TRAE发起的校园计划，校园大使与 TRAE 运营团队对接，策划落地Hakthon、Workshop、Meetup等活动 等活动，通过主题分享与动手实践让参与者零距离体验 AI 原生开发。</p>
+
+        <div class="hero-stats">
+          <div class="stat-item fade-in stagger-1">
+            <span class="stat-number" data-count="1">0</span>
+            <span class="stat-label" data-i18n="event_count">场活动</span>
+          </div>
+          <div class="stat-item fade-in stagger-2">
+            <span class="stat-number" data-count="50">0</span>
+            <span class="stat-label" data-i18n="participants">+ 参与者</span>
+          </div>
+          <div class="stat-item fade-in stagger-3">
+            <span class="stat-number" data-count="3">0</span>
+            <span class="stat-label" data-i18n="hours">小时体验</span>
+          </div>
+          <div class="stat-item fade-in stagger-4">
+            <span class="stat-number" data-count="5">0</span>
+            <span class="stat-label" data-i18n="sessions">个环节</span>
+          </div>
+          <div class="stat-item fade-in stagger-5">
+            <span class="stat-number" data-count="50">0</span>
+            <span class="stat-label" data-i18n="days">天筹备</span>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#overview" class="hero-cta">
+            <span data-i18n="startReading">开始阅读</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 5v14M5 12l7 7 7-7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
     </div>
+    <div class="hero-bg"></div>
   </section>
 
   <section class="section" id="overview">
@@ -504,47 +590,15 @@
     </div>
   </section>
 
-  <section class="section sec-about" id="about">
-    <div class="container">
-      <div class="about-content fade-in">
-        <div class="about-logo">TRAE<span>.</span></div>
-        <p class="about-brand"><strong>TRAE on Campus — AI Coding Meetup</strong><br>一场让高校开发者零距离体验 AI 原生开发的活动</p>
-        
-        <div class="about-info">
-          <div class="about-info-item">
-            <span class="about-info-label">活动日期</span>
-            <span class="about-info-value">2026 年 5 月 10 日</span>
-          </div>
-          <div class="about-info-item">
-            <span class="about-info-label">活动地点</span>
-            <span class="about-info-value">北京嘉里中心·星巴克甄选</span>
-          </div>
-          <div class="about-info-item">
-            <span class="about-info-label">活动主题</span>
-            <span class="about-info-value">Ship faster with TRAE</span>
-          </div>
-          <div class="about-info-item">
-            <span class="about-info-label">参与规模</span>
-            <span class="about-info-value">50+ 人</span>
-          </div>
-        </div>
-        
-        <div class="about-credits">
-          <h4>特别鸣谢</h4>
-          <p>感谢 TRAE 官方团队的大力支持，以及所有参与者的热情投入。本次活动由 TRAE 校园大使独立推进完成。</p>
-        </div>
-      </div>
-      
-      <footer class="footer">
-        <p>© 2026 TRAE on Campus @ CUGB</p>
-      </footer>
-    </div>
-  </section>
+    </div><!-- /main-layer -->
+
+  </div><!-- /page-container -->
 
   <script src="assets/js/main.js"></script>
   <script src="assets/js/scroll.js"></script>
   <script src="assets/js/counter.js"></script>
   <script src="assets/js/theme.js"></script>
   <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/reveal.js"></script>
 </body>
 </html>
