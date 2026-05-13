@@ -283,6 +283,26 @@
   background: transparent;
 }
 
+/* 下拉触发器 active 时底部下划线（用 ::before 因为 ::after 是三角箭头） */
+.dropdown-trigger::before {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 60%;
+  height: 2px;
+  background: var(--accent-primary);
+  border-radius: 1px;
+  transition: transform var(--transition-fast);
+  transform-origin: center;
+}
+
+.dropdown-trigger.active::before,
+.dropdown-trigger:hover::before {
+  transform: translateX(-50%) scaleX(1);
+}
+
 .nav-actions {
   display: flex;
   align-items: center;

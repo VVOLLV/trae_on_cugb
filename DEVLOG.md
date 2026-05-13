@@ -1,5 +1,42 @@
 # 开发日志
 
+## 2026-05-13 · deepseek 分支
+
+### 新增功能
+
+#### 泳道图（Division of Work）
+- 新建 `for_trae/assets/css/swimlane.css` — 双角色 × 三阶段网格布局
+- 在 Hero 与 Overview 之间插入 `#swimlane` 泳道图区域，直观展示 TRAE 官方 vs 校园大使的分工协作
+- 导航栏下拉菜单及移动端汉堡菜单均加入「分工协作」入口
+
+#### 泳道图悬浮标题栏
+- 新建 `for_trae/assets/js/swimlane-sticky.js` — 滚动时 Phase 表头克隆固定吸附在导航栏下方
+- 原表头滚出视野时出现，泳道图区域滚出时消失
+- 移动端自动隐藏
+
+#### 导航高亮优化
+- 重写 `scroll.js`：弃用 IntersectionObserver（与 reveal 自定义滚动冲突），改用 `getBoundingClientRect()` 直接计算
+- 下拉触发器「时间线」在泳道图/Phase 区域时也高亮下划线
+
+### 内容填充
+- Phase 04 复盘三问：做对了/做错了/改进方向各 5 条
+- Phase 04 量化成果 + 个人成长感悟
+- Phase 03 参与者反馈（3 条带院系署名）
+- Highlights 金句填充
+- 所有 `[待填写]` 占位清零
+
+### 国际化完善
+- `i18n.js` 从 30 key 扩展至 130+ key
+- 新增 `data-i18n-html` 支持富文本翻译（`<em>`/`<br>` 标签）
+- 泳道图任务卡片、复盘面板、Phase 内容、Footer 全部双语覆盖
+
+### 技术优化
+- Hero 重设计：纯黑底 + 隐约绿/暖米色光晕，去掉绿黑渐变
+- 新增 favicon（内联 SVG）+ Open Graph 全套标签
+- 泳道图表头 padding 缩减（24px→16px），与悬浮栏一致
+
+# 开发日志
+
 ## 2026-05-12 (下午晚些时候)
 
 ### 完成事项
