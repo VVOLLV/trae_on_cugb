@@ -1,5 +1,41 @@
 # 开发日志
 
+## 2026-05-12 (下午晚些时候)
+
+### 完成事项
+
+#### Top Bar 滑动隐藏效果修复
+- 在 `reveal.js` 中监听滚动事件，同步 Top Bar 的 `transform` 和 `marginBottom` 属性
+- 实现 Top Bar 向上滚动时隐藏，向下滚动时显示
+- 设置 Top Bar 隐藏时 `marginBottom: -var(--top-bar-height)` 折叠布局空间
+
+#### 导航栏上方空白修复
+- 通过设置 Top Bar 的 `marginBottom` 为负值，确保导航栏与 Top Bar 无缝衔接
+
+#### 浅色模式 Hero 页面文字对比度优化
+- 修改 `hero.css`，将 Hero 区域文字颜色硬编码为 `#FFFFFF`
+- 加深遮罩层透明度从 `0.4` 增强对比度
+- `.hero-overlay` 渐变：`linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.55) 100%)`
+
+#### 网站内容文档生成
+- 新建 `SITE_CONTENT.md`，整理网站所有板块的文字内容
+- 包含：Top Bar、Hero、About、Timeline、FAQ、Footer 等所有区域的中英双语内容
+- 方便后续统一修改和维护
+
+#### 文档更新
+- 更新 `README.md` 和 `PLANNING.md`，补充今日修复内容
+
+#### 涉及文件
+
+| 文件 | 变更类型 |
+|------|----------|
+| `for_trae/assets/css/hero.css` | 修改 — 文字颜色 + 遮罩加深 |
+| `for_trae/assets/js/reveal.js` | 修改 — Top Bar 滑动隐藏逻辑 |
+| `SITE_CONTENT.md` | 新增 — 网站文字内容整理 |
+| `README.md` | 修改 — 补充今日修复内容 |
+| `PLANNING.md` | 修改 — 补充今日修复内容 |
+| `DEVLOG.md` | 修改 — 本日志 |
+
 ## 2026-05-12 (下午)
 
 ### 完成事项
