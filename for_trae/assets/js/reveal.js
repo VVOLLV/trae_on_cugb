@@ -176,4 +176,38 @@
       requestTick();
     });
   });
+
+  footerLayer.addEventListener('mousemove', function(e) {
+    var rect = footerLayer.getBoundingClientRect();
+    var x = ((e.clientX - rect.left) / rect.width) * 100;
+    var y = ((e.clientY - rect.top) / rect.height) * 100;
+    footerLayer.style.setProperty('--mouse-x', x + '%');
+    footerLayer.style.setProperty('--mouse-y', y + '%');
+  });
+
+  footerLayer.addEventListener('mouseleave', function() {
+    footerLayer.style.setProperty('--mouse-x', '50%');
+    footerLayer.style.setProperty('--mouse-y', '50%');
+  });
+
+  window.togglePhase = function(el) {
+    var item = el.closest('.timeline-item');
+    var isExpanded = item.classList.contains('expanded');
+    
+    item.classList.toggle('expanded');
+    
+    if (isExpanded) {
+      el.textContent = '展开详情 ▾';
+    } else {
+      el.textContent = '收起详情 ▴';
+      
+      var detail = item.querySelector('.timeline-detail');
+      var target = document.getElementById(item.getAttribute('data-phase'));
+      if (target && target !== null) {
+        setTimeout(function() {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 350);
+      }
+    }
+  };
 })();

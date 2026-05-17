@@ -1,0 +1,16 @@
+# System files
+.DS_Store
+Thumbs.db
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*._tmp*
+
+# Windows caches
+$RECYCLE.BIN/
+SystemVolumeInformation/

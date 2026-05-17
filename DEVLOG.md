@@ -1,5 +1,58 @@
 # 开发日志
 
+## 2026-05-15
+
+### 泳道图完全重构
+
+#### 设计方向调整
+- 用户反馈：之前的泳道图杂乱、不简约直观，不像咨询公司风格
+- 参考麦肯锡咨询报告风格重新设计：**极简主义、颜色克制、无装饰元素、清晰网格**
+
+#### 泳道图架构重构
+- **移除阶段划分**：从 3 个独立表格（Phase 01/02/03）合并为 1 个完整时间线表格
+- **动作错开排列**：TRAE 官方与校园大使的动作独立呈现，不在同一行，真实反映时间线
+  - 2025.09.26：TRAE 发布招募（校园大使列为空）
+  - 2026.02：校园大使准备报名（TRAE 官方列为空）
+  - 3.23 之后：双方动作开始交叉
+- **去掉所有装饰**：移除 emoji（🔴⚪◇📄⚠️✅⚡🎯）、图例说明、圆形图标背景、渐变色
+- **极简视觉**：仅保留 8px 彩色圆点标记类型（●sync ●async ◇decision ⚠blocker ✓solution）
+- **流向箭头**：CSS 三角形替代 emoji 箭头
+
+#### 泳道图内容修正
+- **Phase 01 时间范围**：从 `2026.02-03` 修正为 `2025.09 - 2026.03`（官方去年9月已启动）
+- TRAE 第1行：发布校园大使招募计划 → 9.26（而不是2.15）
+- 校园大使第1行：开始准备 & 提交报名 → 2026.02
+
+#### 代码质量优化
+- **删除死代码引用**：`swimlane-sticky.js` 从 index.html 移除（悬浮标题栏对新布局无意义）
+- **清理 i18n.js 死 key**：
+  - 删除 `swimlane_role`、`swimlane_reflection`、`swimlane_reflection_tag`
+  - 删除 `s_trae_p1_t1` ~ `s_trae_p3_d2`（旧泳道图横向版本，12个key）
+  - 删除 `s_amb_p1_t1` ~ `s_amb_p3_d3`（旧泳道图横向版本，18个key）
+  - 删除 `legend_sync/async/decision/deliverable/blocker/solution`（图例，6个key）
+  - 删除 `self_reflection_title`、`s_reflection_text`（死key，2个key）
+  - **i18n.js 精简约 60 行**
+- **精简 swimlane.css**：
+  - 删除 `.mck-table-header`、`.mck-phase-label` 等阶段表头样式
+  - 删除 `.self-reflection-panel`、`.reflection-phase-card` 等复盘面板样式
+  - 删除 `.mck-legend`、`.swimlane-sticky-head` 等死样式
+  - **swimlane.css 从 476 行精简至 242 行（减少 49%）**
+- **i18n 翻译 key 精简**：泳道图 key 从约 178 个减少至 118 个（减少 34%）
+
+#### 涉及文件变更
+
+| 文件 | 变更类型 | 说明 |
+|------|----------|------|
+| `for_trae/index.html` | 修改 | 泳道图 HTML 重构（221-471行）；删除 `swimlane-sticky.js` 引用 |
+| `for_trae/assets/css/swimlane.css` | 重写 | 从 476 行精简至 242 行；麦肯锡极简风格 |
+| `for_trae/assets/js/i18n.js` | 修改 | 删除约 60 行死 key；新增 34 个垂直时间轴节点 key |
+| `README.md` | 修改 | 更新泳道图描述 + 新增泳道图专项章节 |
+| `DEVLOG.md` | 修改 | 新增本条日志 |
+
+### Hero 区域微调
+- 移除「5 Sessions」统计卡片
+- 「50天筹备」→「3个月筹备」（数字50→3，标签 Day→Months），与网站副标题「A Story in Three Months」呼应
+
 ## 2026-05-13 · deepseek 分支
 
 ### 新增功能
