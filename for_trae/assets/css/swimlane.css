@@ -1,6 +1,7 @@
 /* ========================================
-   SWIMLANE — 极简专业泳道图
-   角色 × 时间 · 麦肯锡咨询风
+   SWIMLANE — TRAE 校园大使活动流程泳道图
+   PRD v2 · 双色泳道 · 3行类型 · 极简暗黑
+   TRAE = 绿 #22C55E  |  大使 = 蓝 #60A5FA
    ======================================== */
 
 .swimlane {
@@ -13,13 +14,15 @@
 }
 
 /* ===== 表格容器 ===== */
+
 .mck-table {
   margin-bottom: var(--space-lg);
-  border: 1px solid #e5e7eb;
-  background: #fff;
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
 }
 
-/* ===== 网格表格 ===== */
 .mck-grid {
   width: 100%;
   border-collapse: collapse;
@@ -30,115 +33,249 @@
 .mck-col-trae { width: calc(50% - 45px); }
 .mck-col-amb  { width: calc(50% - 45px); }
 
-/* 角色表头 */
+/* ===== 角色表头 — 双色区分 ===== */
+
 .mck-role-header {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 14px 20px;
-  background: #f9fafb;
-  border-bottom: 1px solid #e5e7eb;
+  gap: 12px;
+  padding: 18px 28px;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .mck-role-name {
   font-size: 13px;
   font-weight: 700;
-  color: #374151;
+  color: var(--text-primary);
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
 }
 
 .mck-role-sub {
   font-size: 11px;
-  color: #9ca3af;
+  color: #86868B;
   margin-left: auto;
-  font-style: italic;
+  font-weight: 400;
 }
 
-/* 时间列 */
+.mck-col-trae .mck-role-name::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-primary);
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.mck-col-amb .mck-role-name::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-blue);
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* ===== 时间列 ===== */
+
 .mck-cell-time {
-  padding: 16px 12px;
+  padding: 20px 14px;
   font-family: var(--font-mono);
   font-size: 13px;
   font-weight: 600;
-  color: #6b7280;
+  color: #86868B;
   text-align: center;
   vertical-align: middle;
-  background: #f9fafb;
-  border-bottom: 1px solid #e5e7eb;
-  border-right: 1px solid #e5e7eb;
+  background: rgba(255, 255, 255, 0.02);
+  border-bottom: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  position: relative;
 }
 
 .mck-cell-time small {
   display: block;
   font-size: 11px;
   font-weight: 400;
-  opacity: 0.7;
-  margin-top: 2px;
+  color: #86868B;
+  opacity: 0.5;
+  margin-top: 3px;
 }
 
-/* 任务单元格 */
+/* ===== 任务单元格 — 泳道颜色继承 ===== */
+
 .mck-cell {
-  padding: 18px 24px;
-  vertical-align: top;
-  border-bottom: 1px solid #e5e7eb;
-  transition: background 0.15s ease;
+  padding: 22px 28px;
+  vertical-align: middle;
+  border-bottom: 1px solid var(--border-color);
+  transition: background var(--transition-fast);
 }
 
-.mck-cell:hover { background: #fafafa; }
+.mck-cell:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
 
-.mck-cell.trae-cell { border-right: 1px solid #e5e7eb; }
+.mck-cell.trae-cell {
+  border-right: 1px solid var(--border-color);
+}
 
-.mck-cell.empty { background: #fafafa; }
+.mck-cell.empty {
+  background: transparent;
+  color: #86868B;
+  opacity: 0.2;
+}
+
+.mck-cell.empty::after {
+  content: '—';
+  font-size: 16px;
+  letter-spacing: 6px;
+  font-weight: 300;
+}
+
+/* ===== 行类型 — 仅 3 种 ===== */
+
+/* 同步沟通行 */
+.mck-row-sync .mck-cell-time {
+  background: rgba(34, 197, 94, 0.06);
+  color: var(--accent-primary);
+}
+.mck-row-sync .mck-cell-time small {
+  color: var(--accent-primary);
+  opacity: 0.5;
+}
+.mck-row-sync .mck-cell-time::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: var(--accent-primary);
+  border-radius: 0 2px 2px 0;
+}
+.mck-row-sync .mck-cell.trae-cell {
+  background: rgba(34, 197, 94, 0.03);
+}
+.mck-row-sync .mck-cell.amb-cell {
+  background: rgba(96, 165, 250, 0.03);
+}
+
+/* 成功行 — sync 变体，增强庆祝感 */
+.mck-row-success .mck-cell-time {
+  background: rgba(34, 197, 94, 0.12);
+  color: var(--accent-primary);
+  font-weight: 700;
+}
+.mck-row-success .mck-cell-time small {
+  color: var(--accent-primary);
+  opacity: 0.65;
+}
+.mck-row-success .mck-cell.trae-cell {
+  background: rgba(34, 197, 94, 0.06);
+  border-left: 3px solid var(--accent-primary);
+}
+.mck-row-success .mck-cell.amb-cell {
+  background: rgba(96, 165, 250, 0.05);
+  border-left: 3px solid var(--accent-blue);
+}
+
+/* 异步行 */
+.mck-row-async .mck-cell-time {
+  color: #86868B;
+  opacity: 0.45;
+}
+.mck-row-async .mck-cell-time small {
+  opacity: 0.3;
+}
+.mck-row-async .mck-cell.trae-cell {
+  background: transparent;
+}
+.mck-row-async .mck-cell.amb-cell {
+  background: transparent;
+}
 
 /* 卡点行 */
+.mck-row-blocker .mck-cell-time {
+  background: rgba(251, 191, 36, 0.08);
+  color: #fbbf24;
+  font-weight: 700;
+}
+.mck-row-blocker .mck-cell-time small {
+  color: #f59e0b;
+}
+.mck-row-blocker .mck-cell.trae-cell {
+  background: rgba(251, 191, 36, 0.03);
+}
 .mck-row-blocker .mck-cell.amb-cell {
-  background: #fef2f2;
-  border-left: 3px solid #dc2626;
+  background: rgba(239, 68, 68, 0.04);
+  border-left: 3px solid #ef4444;
+  position: relative;
+}
+.mck-row-blocker .mck-cell.amb-cell::after {
+  content: '';
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ef4444;
+  animation: mck-pulse 2s ease-in-out infinite;
 }
 
-/* 解决方案行 */
-.mck-row-solution .mck-cell.trae-cell {
-  background: #f0fdf4;
-  border-left: 3px solid #16a34a;
+@keyframes mck-pulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
+  50% { opacity: 0.5; box-shadow: 0 0 0 6px rgba(239, 68, 68, 0); }
 }
 
-/* 任务文本 */
+/* ===== 任务文本 ===== */
+
 .mck-task {
   font-size: 14px;
   font-weight: 600;
-  color: #111827;
-  line-height: 1.5;
-  margin-bottom: 4px;
+  color: var(--text-primary);
+  line-height: 1.6;
 }
 
 .mck-task-desc {
   font-size: 13px;
-  color: #6b7280;
-  line-height: 1.6;
-}
-
-.mck-task-detail {
-  font-size: 12px;
-  color: #9ca3af;
-  line-height: 1.6;
-  margin-top: 6px;
-  padding-left: 12px;
-  border-left: 2px solid #e5e7eb;
-}
-
-.mck-task-detail code {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  background: #f3f4f6;
-  padding: 2px 6px;
-  border-radius: 3px;
-  color: #374151;
+  color: #86868B;
+  line-height: 1.65;
   margin-top: 4px;
-  display: inline-block;
 }
 
-/* 类型标签 — 极小圆点 */
+/* ===== Chip 标签 — 用于"完成"等状态标记 ===== */
+
+.mck-chip {
+  display: inline-flex;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 2px 10px;
+  border-radius: 100px;
+  margin-left: 10px;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.trae-cell .mck-chip {
+  background: rgba(34, 197, 94, 0.12);
+  color: var(--accent-primary);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.amb-cell .mck-chip {
+  background: rgba(96, 165, 250, 0.12);
+  color: var(--accent-blue);
+  border: 1px solid rgba(96, 165, 250, 0.2);
+}
+
+/* ===== 类型标签 — 按语义用色 ===== */
+
 .mck-tag {
   display: inline-flex;
   align-items: center;
@@ -146,38 +283,36 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  margin-right: 8px;
+  margin-right: 10px;
   vertical-align: middle;
+  flex-shrink: 0;
 }
 
-.mck-tag.sync      { background: #dc2626; }
-.mck-tag.async     { background: #9ca3af; }
-.mck-tag.decision  { background: transparent; border: 2px solid #d97706; transform: rotate(45deg) scale(0.8); }
-.mck-tag.blocker   { background: #dc2626; }
-.mck-tag.solution  { background: #16a34a; }
+.mck-tag.sync    { background: var(--accent-primary); box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.15); }
+.mck-tag.async   { background: #86868B; opacity: 0.35; }
+.mck-tag.blocker { background: #ef4444; box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2); animation: mck-pulse 2s ease-in-out infinite; }
 
-/* 流向箭头 */
+/* ===== 流向箭头 — 统一绿色 ===== */
+
 .mck-flow-right::before {
   content: '';
   display: inline-block;
-  width: 0;
-  height: 0;
+  width: 0; height: 0;
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
   border-left: 6px solid var(--accent-primary);
-  margin-right: 8px;
+  margin-right: 10px;
   vertical-align: middle;
 }
 
 .mck-flow-left::before {
   content: '';
   display: inline-block;
-  width: 0;
-  height: 0;
+  width: 0; height: 0;
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
-  border-right: 6px solid var(--warm-cream);
-  margin-right: 8px;
+  border-right: 6px solid var(--accent-blue);
+  margin-right: 10px;
   vertical-align: middle;
 }
 
@@ -185,13 +320,7 @@
 
 @media (max-width: 1023px) {
   .mck-grid { font-size: 0.95em; }
-
-  .mck-cell-time {
-    width: 70px;
-    font-size: 12px;
-    padding: 12px 8px;
-  }
-
+  .mck-cell-time { width: 72px; font-size: 12px; padding: 16px 8px; }
   .mck-task      { font-size: 13px; }
   .mck-task-desc { font-size: 12px; }
   .mck-role-sub  { display: none; }
@@ -210,32 +339,41 @@
   .mck-grid thead tr { display: none; }
 
   .mck-grid tbody tr {
-    margin-bottom: 12px;
-    border: 1px solid #e5e7eb;
-    border-radius: 6px;
+    margin-bottom: 14px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
     overflow: hidden;
+    background: var(--bg-card);
+  }
+
+  .mck-row-sync tbody tr,
+  .mck-row-success tbody tr {
+    border-left: 3px solid var(--accent-primary);
+  }
+  .mck-row-success tbody tr {
+    background: rgba(34, 197, 94, 0.04);
+  }
+  .mck-row-blocker tbody tr {
+    border-left: 3px solid #ef4444;
+    background: rgba(251, 191, 36, 0.03);
   }
 
   .mck-cell-time {
-    background: #111827;
-    color: #fff;
-    padding: 10px 16px;
+    background: var(--bg-secondary);
+    color: #86868B;
+    padding: 12px 20px;
     text-align: left;
     border: none;
-    border-bottom: 1px solid #374151;
+    border-bottom: 1px solid var(--border-color);
   }
 
-  .mck-cell-time small { color: rgba(255, 255, 255, 0.6); }
+  .mck-cell-time small { color: #86868B; opacity: 0.5; }
 
   .mck-cell {
     border: none !important;
-    padding: 14px 16px;
+    padding: 16px 20px;
   }
 
-  .mck-role-header {
-    padding: 8px 0;
-    background: transparent;
-  }
-
+  .mck-role-header { padding: 10px 0; background: transparent; }
   .mck-role-sub { display: none; }
 }
