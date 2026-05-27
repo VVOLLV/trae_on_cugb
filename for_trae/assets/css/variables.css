@@ -19,6 +19,18 @@
   --error: #EF4444;
   --improvement: #F59E0B;
   
+  /* ===== 泳道图时间列背景变量 ===== */
+  /* 颜色语义：
+   * - default: 极淡白，普通状态
+   * - sync: 微绿，双方同步沟通
+   * - blocker: 微蓝，卡点/决策点（大使侧主导）
+   * - success: 强绿，任务完成/里程碑
+   */
+  --swimlane-time-bg-default: rgba(255, 255, 255, 0.02);
+  --swimlane-time-bg-sync: rgba(34, 197, 94, 0.06);
+  --swimlane-time-bg-blocker: rgba(96, 165, 250, 0.08);
+  --swimlane-time-bg-success: rgba(34, 197, 94, 0.12);
+  
   --font-display: 'Inter', 'PingFang SC', 'Microsoft YaHei', sans-serif;
   --font-body: 'PingFang SC', 'Microsoft YaHei', 'Inter', sans-serif;
   --font-text: 'Inter', 'PingFang SC', 'Microsoft YaHei', sans-serif;

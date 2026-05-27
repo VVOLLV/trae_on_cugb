@@ -1,24 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const navToggle = document.querySelector('.nav-toggle');
-  const navMobile = document.querySelector('.nav-mobile');
-  const navLinks = document.querySelectorAll('.nav-links a, .nav-mobile a');
-
-  navToggle.addEventListener('click', function() {
-    navMobile.classList.toggle('active');
-    this.classList.toggle('active');
-  });
-
-  navLinks.forEach(function(link) {
-    link.addEventListener('click', function() {
-      navMobile.classList.remove('active');
-      navToggle.classList.remove('active');
+  /* 异步跟进可切换组件 */
+  document.querySelectorAll('.mck-async-toggle').forEach(function(toggle) {
+    toggle.addEventListener('click', function(e) {
+      e.stopPropagation();
+      this.classList.toggle('expanded');
+      var isExpanded = this.classList.contains('expanded');
+      this.setAttribute('aria-expanded', String(isExpanded));
     });
-  });
 
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && navMobile.classList.contains('active')) {
-      navMobile.classList.remove('active');
-      navToggle.classList.remove('active');
-    }
+    toggle.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        this.click();
+      }
+    });
   });
 });

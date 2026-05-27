@@ -97,9 +97,33 @@
 .hero-desc {
   font-size: 1.15rem;
   line-height: 1.8;
-  margin-bottom: var(--space-md);
+  margin-bottom: 0;
   color: rgba(255, 255, 255, 0.75);
   max-width: 680px;
+}
+
+/* 场地信息 — 初始隐藏，hover 显示 */
+.hero-venue {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin-bottom: var(--space-md);
+  margin-top: 0;
+  color: rgba(255, 255, 255, 0.75);
+  background: rgba(34, 197, 94, 0);
+  padding: 0.5rem 0;
+  border-radius: var(--radius-sm);
+  display: inline-block;
+  transition: all 0.3s ease;
+  cursor: default;
+  max-width: 680px;
+}
+
+/* 当鼠标悬停在 hero-content 区域时，场地信息显示 */
+.hero-content:hover .hero-venue,
+.hero-venue:hover {
+  color: rgba(255, 255, 255, 0.95);
+  background: rgba(34, 197, 94, 0.15);
+  padding: 0.5rem 1rem;
 }
 
 .hero-stats {
