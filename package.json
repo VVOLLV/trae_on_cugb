@@ -1,0 +1,9 @@
+{
+  "name": "trae-on-cugb",
+  "version": "1.0.0",
+  "private": true,
+  "description": "TRAE on Campus @ CUGB",
+  "scripts": {
+    "dev": "python -m http.server 8080"
+  }
+}
