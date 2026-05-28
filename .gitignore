@@ -1,11 +1,20 @@
-# System files
+# OS files
 .DS_Store
 Thumbs.db
-*.log
 
-# IDE
+# Editor files
 .vscode/
 .idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Node
+node_modules/
+npm-debug.log*
 
 # Temporary files
 *.tmp
