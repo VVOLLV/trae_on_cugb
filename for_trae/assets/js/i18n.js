@@ -7,6 +7,7 @@ const I18n = {
       nav_swimlane: '分工协作',
       nav_timeline: '时间线',
       highlights: '精彩瞬间',
+      top_logo: 'TRAE on Campus @中国地质大学（北京）',
 
       // Hero
       startReading: '开始阅读',
@@ -14,6 +15,9 @@ const I18n = {
       participants: '+ 参与者',
       hours: '小时体验',
       days: '个月筹备',
+      hero_university: '@中国地质大学（北京）',
+      hero_desc: 'TRAE on Campus 是字节跳动旗下 AI 编程产品——TRAE发起的校园计划，校园大使与 TRAE 运营团队对接，策划落地Hakthon、Workshop、Meetup等系列活动，通过主题分享与动手实践让参与者零距离体验 AI 原生开发。',
+      hero_venue: '本次中国地质大学（北京）站以 AI Coding Meetup 形式举办',
 
       // Timeline section
       timeline_tag: 'Timeline',
@@ -34,7 +38,7 @@ const I18n = {
       phase_apply_detail_title: '故事的开始',
       phase_apply_detail_body: '偶然在社交平台看到了 TRAE on Campus 在其他高校举办活动，当时我就在想：我可不可以在我们学校举办这种活动呢？于是去搜集更多关于 TRAE on Campus 的信息，找到报名表，填写并提交报名表。三周后，获得面试邀请，参加面试，面试通过。',
       phase_plan_detail_title: '策划历程',
-      phase_plan_detail_body: '本次活动经历了两版策划方案的迭代。初期方案计划在校内举办 Workshop，尝试申请借用学校教室并寻求校内支持，但因校方管理严格未能推进。经与 TRAE 运营沟通后，最终决定转至校外举办，有效规避了校内审批流程。运营提供了一套完整的线上宣传物料，通过微信公众号、小红书、抖音等平台进行传播，并联动校园墙及机器学习课程群扩大覆盖范围。活动前三天开展线下宣传，印制并张贴大海报20张、小海报50张。此外，运营还提供了5个易拉宝及1条活动条幅用于现场布置。宣传期累计吸引约80人加入报名群，受场地容量限制，通过群接龙筛选确认50名参与者。筹备阶段同步完成主持词撰写及主持手卡制作。',
+      phase_plan_detail_body: '最初方案是在校内举办 Workshop，但场地和活动审批始终无法推进，项目一度卡住。与 TRAE 运营沟通后，运营团队协助锁定了校外场地，活动形式也从 Workshop 调整为更灵活的 Meetup——这一调整反而让后续的筹备路径清晰了很多。',
       phase_land_detail_title: '活动当天',
       phase_land_detail_body: '5月10日下午，50位参与者在嘉里中心·星巴克甄选齐聚。李骁老师与橘子老师分别带来主题分享，校园大使现场带领实操教学，三个小时里大家从听到做，亲身感受了 AI 辅助编程的体验。',
 
@@ -75,7 +79,7 @@ const I18n = {
 
       // Swimlane — 校园大使
       v_amb_1: '获取招募信息，提交报名表',
-      v_amb_3: '完成初版策划书；确认社团名义举办要求',
+      v_amb_3: '完成初版策划书',
       v_amb_5: '推进校内场地审批，遇阻',
       v_amb_7: '启动线上宣传',
       v_amb_8: '北京嘉里中心星巴克甄选场地踩点',
@@ -98,8 +102,7 @@ const I18n = {
 
       // Phase 04 — 成长感悟
       reflection_growth_title: '个人成长感悟',
-      p4_growth: '从申请到落地，这场活动经历了不少调整。最初设想在校内办 Workshop，后来转到了校外；宣传方案改了好几版，物料也反复确认。过程中体会到一件事：想象和现实之间总有差距，与其追求完美，不如把能用的资源都用上。TRAE 运营团队给了很多支持——宣传图、易拉宝、条幅都是他们提供的，活动前及时对齐流程也帮了大忙。品牌方其实比谁都希望活动办好，主动沟通比闷头干效率高很多。',
-      p4_growth_2: '现场也出了些状况：屏幕显示效果不理想、网络偶尔卡顿。好在之前准备了应急方案，网络不好就临时抽奖救场。但一个人确实顾不过来——摄影没人专门拍，照片质量一般；主持的同时还要控场、看时间、管设备，分身乏术。如果下次再做，最想改变的一点就是：尽早找到愿意一起干的人，分工之后很多事情会轻松很多。',
+      p4_growth: '一是想象和现实总有差距，不必追求完美，先把能用的资源用起来；二是品牌方比谁都希望活动办好，主动沟通比闷头做事效率高很多。现场体会到一个人兼顾主持、控场、设备的局限，下次再做会尽早组建小团队分工协作。',
 
       // Highlights
       highlights_tag: 'Highlights',
@@ -108,14 +111,23 @@ const I18n = {
       hl_card1_title: '活动现场',
       hl_card1_quote: '嘉里中心·星巴克甄选，50 位参与者齐聚一堂',
       hl_card2_title: '筹备日常',
-      hl_card2_quote: '活动前三天的教室走廊，手里攥着刚印好的海报',
+      hl_card2_quote: '学校教室内，分发线下宣传物料',
       hl_card3_title: '场地细节',
-      hl_card3_quote: '星巴克甄选 × TRAE SOLO，非校园场地的品牌质感',
+      hl_card3_quote: '星巴克 × TRAE SOLO',
 
       // About / Footer
       about_title: '关于活动',
       credits_title: '特别鸣谢',
       footer_text: '© 2026 TRAE on Campus @ CUGB',
+      footer_title: 'TRAE on Campus @中国地质大学（北京）',
+      event_badge_1: '第一期',
+      event_badge_2: '第二期',
+      event_name: 'AI Coding Meetup',
+      event_date: '📅 2026年5月10日',
+      event_attendance: '👥 50人到场 · 80人报名',
+      event_location: '📍 北京嘉里中心·星巴克甄选',
+      event_upcoming: '正在筹备中',
+      footer_copyright: 'TRAE on Campus @中国地质大学（北京）by Quankun',
       about_brand_desc: 'TRAE on Campus — AI Coding Meetup',
       about_brand_sub: '一场让高校开发者零距离体验 AI 原生开发的活动',
       about_date_label: '活动日期',
@@ -133,6 +145,7 @@ const I18n = {
       nav_swimlane: 'Division of Work',
       nav_timeline: 'Timeline',
       highlights: 'Highlights',
+      top_logo: 'TRAE on Campus @China University of Geosciences (Beijing)',
 
       // Hero
       startReading: 'Start Reading',
@@ -140,6 +153,9 @@ const I18n = {
       participants: '+ Participants',
       hours: ' Hours',
       days: ' Months Prep',
+      hero_university: '@China University of Geosciences (Beijing)',
+      hero_desc: 'TRAE on Campus is ByteDance\'s AI coding product - a campus initiative launched by TRAE. Campus Ambassadors collaborate with the TRAE operations team to organize events including Hackathons, Workshops, and Meetups, allowing participants to experience AI-native development through presentations and hands-on practice.',
+      hero_venue: 'This stop at China University of Geosciences (Beijing) was held as an AI Coding Meetup',
 
       // Timeline section
       timeline_tag: 'Timeline',
@@ -160,7 +176,7 @@ const I18n = {
       phase_apply_detail_title: 'How It All Started',
       phase_apply_detail_body: 'I stumbled upon TRAE on Campus events at other universities on social media, and immediately thought: could I host something like this at our school? I researched more about the program, found the application form, filled it out, and submitted it. Three weeks later, I received an interview invitation, aced the interview, and got accepted.',
       phase_plan_detail_title: 'The Planning Journey',
-      phase_plan_detail_body: 'This event went through two major iterations of the plan. The initial concept was to host a Workshop on campus — I tried applying for classroom space and seeking university support, but the strict administrative procedures made it unfeasible. After discussions with the TRAE Ops team, we pivoted to an off-campus venue, effectively bypassing the approval bottleneck. The Ops team provided a complete set of online promotional materials distributed across WeChat Official Accounts, Xiaohongshu, and Douyin, combined with campus confessions walls and machine learning course groups to expand reach. Three days before the event, we launched offline promotion: 20 large posters and 50 small posters were printed and displayed. The Ops team also supplied 5 roll-up banners and 1 event backdrop banner for venue decoration. The promotion period attracted around 80 people to the registration group. Due to venue capacity limits, we confirmed 50 participants via group relay sign-up. During preparation, we also wrote the host script and created cue cards.',
+      phase_plan_detail_body: 'The initial plan was to host a Workshop on campus, but venue and event approvals stalled for weeks, putting the project at a standstill. After discussing with the TRAE Ops team, they helped secure an off-campus venue. We pivoted from Workshop to a more flexible Meetup format — a change that actually clarified the entire preparation path.',
       phase_land_detail_title: 'Event Day',
       phase_land_detail_body: 'On the afternoon of May 10, 50 participants gathered at Kerry Center · Starbucks Reserve. Teacher Li Xiao and Teacher Orange delivered themed presentations, while the Campus Ambassador led a hands-on coding workshop. Over three hours, everyone transitioned from passive listening to active coding, experiencing AI-assisted programming first-hand.',
 
@@ -224,8 +240,7 @@ const I18n = {
 
       // Phase 04 — Growth
       reflection_growth_title: 'Personal Growth Reflection',
-      p4_growth: 'From application to execution, this event went through many adjustments. The initial idea was to hold a Workshop on campus, which later shifted to an off-campus venue. The promotion plan went through several revisions, and materials were repeatedly confirmed. One thing I learned along the way: there is always a gap between imagination and reality. Rather than chasing perfection, it is better to make full use of the resources available. The TRAE Ops team provided tremendous support — promo graphics, roll-up banners, and event banners were all supplied by them. Aligning the process with them before the event also helped immensely. The brand team wants the event to succeed as much as anyone — proactive communication is far more efficient than working in isolation.',
-      p4_growth_2: 'There were also hiccups on-site: the screen display was suboptimal, and the network occasionally lagged. Fortunately, contingency plans were in place — when the network faltered, an impromptu lucky draw saved the moment. But managing everything alone was overwhelming — no dedicated photographer meant mediocre photo quality. Simultaneously hosting, managing the flow, keeping time, and handling equipment left me stretched thin. If I were to do this again, the biggest change I would make is: find people willing to work together early on. With proper division of labor, many things become much easier.',
+      p4_growth: 'First, imagination and reality always differ - no need to pursue perfection, just use available resources; second, the brand wants the event to succeed more than anyone, and proactive communication is far more efficient than working alone. Experiencing the limits of handling hosting, crowd control, and equipment alone, next time I will assemble a small team early for better division of labor.',
 
       // Highlights
       highlights_tag: 'Highlights',
@@ -234,14 +249,23 @@ const I18n = {
       hl_card1_title: 'The Event Scene',
       hl_card1_quote: 'Kerry Center · Starbucks Reserve, 50 participants gathered together',
       hl_card2_title: 'Behind the Scenes',
-      hl_card2_quote: 'The hallway three days before the event, holding freshly printed posters',
+      hl_card2_quote: 'Distributing offline promotional materials in the classroom',
       hl_card3_title: 'Venue Details',
-      hl_card3_quote: 'Starbucks Reserve × TRAE SOLO, the premium feel of an off-campus venue',
+      hl_card3_quote: 'Starbucks × TRAE SOLO',
 
       // About / Footer
       about_title: 'About',
       credits_title: 'Credits',
       footer_text: '© 2026 TRAE on Campus @ CUGB',
+      footer_title: 'TRAE on Campus @China University of Geosciences (Beijing)',
+      event_badge_1: 'Phase 1',
+      event_badge_2: 'Phase 2',
+      event_name: 'AI Coding Meetup',
+      event_date: '📅 May 10, 2026',
+      event_attendance: '👥 50 attendees · 80 registered',
+      event_location: '📍 Beijing Kerry Center · Starbucks Reserve',
+      event_upcoming: 'In preparation',
+      footer_copyright: 'TRAE on Campus @China University of Geosciences (Beijing) by Quankun',
       about_brand_desc: 'TRAE on Campus — AI Coding Meetup',
       about_brand_sub: 'An event that brings AI-native development within reach for university developers',
       about_date_label: 'Date',

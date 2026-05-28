@@ -10,7 +10,15 @@ Thumbs.db
 # Temporary files
 *.tmp
 *._tmp*
+_swimlane_snippet.html
 
 # Windows caches
 $RECYCLE.BIN/
 SystemVolumeInformation/
+
+# Large files and uploads
+uploads/
+
+# Environment
+.env
+.env.local

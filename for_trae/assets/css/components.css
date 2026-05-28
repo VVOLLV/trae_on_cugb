@@ -194,6 +194,7 @@
   overflow: hidden;
   border-radius: var(--radius-md) var(--radius-md) 0 0;
   background: var(--bg-secondary);
+  will-change: transform;
 }
 
 .highlight-img img {
@@ -201,6 +202,7 @@
   height: 100%;
   object-fit: cover;
   transition: transform 0.4s ease;
+  will-change: transform;
 }
 
 .highlight-card:hover .highlight-img img {
@@ -219,7 +221,7 @@
 }
 
 .highlight-quote {
-  color: var(--warm-cream);
+  color: var(--text-secondary);
   font-style: italic;
   font-size: var(--text-small);
 }

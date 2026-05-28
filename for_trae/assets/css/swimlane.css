@@ -68,10 +68,11 @@
 }
 
 .mck-role-sub {
-  font-size: 11px;
-  color: #86868B;
+  font-size: 12px;
+  color: var(--text-secondary);
   margin-left: auto;
   font-weight: 400;
+  letter-spacing: 0.3px;
 }
 
 /* ===== 时间列 ===== */
@@ -333,6 +334,17 @@
 }
 
 @media (max-width: 767px) {
+  .swimlane {
+    padding: var(--space-xl) 0;
+  }
+
+  .mck-table {
+    border: none;
+    background: transparent;
+    border-radius: 0;
+    overflow: visible;
+  }
+
   .mck-grid,
   .mck-grid thead,
   .mck-grid tbody,
@@ -345,7 +357,7 @@
   .mck-grid thead tr { display: none; }
 
   .mck-grid tbody tr {
-    margin-bottom: 14px;
+    margin-bottom: 12px;
     border: 1px solid var(--border-color);
     border-radius: var(--radius-md);
     overflow: hidden;
@@ -353,24 +365,115 @@
   }
 
   .mck-row-sync tbody tr {
-    background: rgba(34, 197, 94, 0.02);
+    background: rgba(34, 197, 94, 0.03);
+    border-color: rgba(34, 197, 94, 0.15);
+  }
+
+  .mck-row-async tbody tr {
+    background: rgba(96, 165, 250, 0.02);
+    border-color: rgba(96, 165, 250, 0.1);
   }
 
   .mck-cell-time {
     background: var(--bg-secondary);
-    color: #86868B;
-    padding: 12px 20px;
+    color: var(--accent-primary);
+    padding: 10px 20px;
     text-align: left;
     border: none;
     border-bottom: 1px solid var(--border-color);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+
+  .mck-row-async .mck-cell-time {
+    color: var(--text-muted);
+    opacity: 0.6;
   }
 
   .mck-cell {
     border: none !important;
-    padding: 16px 20px;
+    padding: 14px 20px;
+  }
+
+  .mck-cell.empty {
+    display: none;
+  }
+
+  .mck-task {
+    font-size: 14px;
+    line-height: 1.6;
+    word-break: break-word;
+  }
+
+  .mck-row-sync .mck-task {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    justify-content: flex-start;
+  }
+
+  .mck-row-sync .mck-cell-merged .mck-task {
+    justify-content: flex-start;
+  }
+
+  .mck-row-sync .mck-tag {
+    width: 8px;
+    height: 8px;
+    min-width: 8px;
+    margin-top: 6px;
+    flex-shrink: 0;
+  }
+
+  .mck-task-wrap {
+    display: block;
+    min-width: 0;
   }
 
   .mck-role-header { padding: 10px 0; background: transparent; }
   .mck-role-sub { display: none; }
-  .mck-task-wrap { min-width: 0; }
+
+  .mck-async-toggle {
+    width: 100%;
+    padding: 6px 0;
+    justify-content: flex-start;
+  }
+
+  .mck-async-toggle.expanded .mck-async-text {
+    max-width: none;
+    white-space: normal;
+    line-height: 1.5;
+  }
+
+  .trae-cell::before,
+  .amb-cell::before {
+    content: attr(data-role);
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: 100px;
+    margin-bottom: 6px;
+    flex-shrink: 0;
+  }
+
+  .trae-cell::before {
+    background: rgba(34, 197, 94, 0.12);
+    color: var(--accent-primary);
+    content: "TRAE 运营";
+  }
+
+  .amb-cell::before {
+    background: rgba(96, 165, 250, 0.12);
+    color: var(--accent-blue);
+    content: "校园大使";
+  }
+
+  .mck-cell-merged::before {
+    content: "双方同步";
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.12), rgba(96, 165, 250, 0.12));
+    color: var(--text-secondary);
+  }
 }

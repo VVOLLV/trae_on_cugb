@@ -35,7 +35,7 @@
 }
 
 .footer-content {
-  padding: 20px 0 12px;
+  padding: 30px 0 12px;
 }
 
 .footer-layer-bottom {
@@ -60,6 +60,7 @@
   border-radius: 0 0 20px 20px;
   will-change: transform;
   min-height: 100%;
+  transform: translateZ(0);
 }
 
 @media (max-width: 767px) {
