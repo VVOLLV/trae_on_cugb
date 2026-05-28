@@ -25,6 +25,9 @@ _swimlane_snippet.html
 $RECYCLE.BIN/
 SystemVolumeInformation/
 
+# Nested repos
+for_trae/
+
 # Large files and uploads
 uploads/
 

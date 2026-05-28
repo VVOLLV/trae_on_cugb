@@ -1,6 +1,6 @@
 # TRAE on Campus @ 中国地质大学（北京）
 
-> 🌟 **线上地址**: [https://VVOLLV.github.io/trae_cugb/](https://VVOLLV.github.io/trae_cugb/)
+> 🌟 **线上地址**: [https://VVOLLV.github.io/trae_on_cugb/](https://VVOLLV.github.io/trae_on_cugb/)
 
 TRAE on Campus AI Coding Meetup 活动回顾网站。纯静态单页面，完整记录从申请、策划到落地、复盘的全程。
 
@@ -40,39 +40,38 @@ TRAE on Campus AI Coding Meetup 活动回顾网站。纯静态单页面，完整
 ## 📁 项目结构
 
 ```
-trae_cugb/
+trae_on_cugb/
 ├── .gitignore
 ├── README.md
-└── for_trae/                          # 网站源码
-    ├── index.html                     # 主页面（497 行，单页应用）
-    └── assets/
-        ├── css/                       # 样式（15 个，模块化拆分）
-        │   ├── variables.css          # CSS 变量：颜色、字体、间距、泳道图背景色
-        │   ├── base.css               # 全局重置、容器、滚动条、选中样式
-        │   ├── animations.css         # 渐入/滑入/缩放动画 + stagger 延迟 + keyframes
-        │   ├── navigation.css         # 顶栏 + 吸顶导航 + 语言/主题切换按钮
-        │   ├── hero.css               # 首屏 Hero 区域（纯黑底 + 绿色光晕）
-        │   ├── swimlane.css           # 麦肯锡风格泳道图（双角色 × 时间线表格）
-        │   ├── timeline.css           # 纵向时间线 + 可展开详情
-        │   ├── phase.css              # 阶段标题 + 叙事块样式
-        │   ├── table.css              # 活动当天流程表（RODS 表格）
-        │   ├── components.css         # 决策卡片、精选瞬间卡片、交付物、总览介绍
-        │   ├── reflection.css         # 复盘三列网格（做对了/待改进/改进方向）
-        │   ├── reveal.css             # Footer 揭开效果（双层页面容器）
-        │   ├── about.css              # Footer 活动卡片 + 鸣谢
-        │   ├── icons.css              # 导航栏图标按钮
-        │   └── responsive.css         # 响应式适配（1024/767/480/360 四级断点 + 横屏 + 安全区 + 打印）
-        ├── js/                        # 脚本（6 个，按职责拆分）
-        │   ├── main.js                # 泳道图异步按钮交互
-        │   ├── reveal.js              # 页面滚动容器 + Footer 揭开效果 + RAF 缓动动画 + 锚点导航
-        │   ├── counter.js             # Hero 数字递增动画（IntersectionObserver 触发）
-        │   ├── theme.js               # 深色/浅色主题管理器（CSS 变量注入 + localStorage）
-        │   ├── i18n.js                # 中英文国际化（140+ 翻译键，localStorage 持久化）
-        │   └── scroll.js              # IntersectionObserver 滚动渐入 + 导航高亮跟踪
-        └── images/                    # 图片资源（3 张）
-            ├── scene-detail.jpg       # 活动现场
-            ├── scene-handbook.jpg     # 筹备日常
-            └── scene-venue.jpg        # 场地细节
+├── index.html                       # 主页面（497 行，单页应用）
+└── assets/
+    ├── css/                         # 样式（15 个，模块化拆分）
+    │   ├── variables.css            # CSS 变量：颜色、字体、间距、泳道图背景色
+    │   ├── base.css                 # 全局重置、容器、滚动条、选中样式
+    │   ├── animations.css           # 渐入/滑入/缩放动画 + stagger 延迟 + keyframes
+    │   ├── navigation.css           # 顶栏 + 吸顶导航 + 语言/主题切换按钮
+    │   ├── hero.css                 # 首屏 Hero 区域（纯黑底 + 绿色光晕）
+    │   ├── swimlane.css             # 麦肯锡风格泳道图（双角色 × 时间线表格）
+    │   ├── timeline.css             # 纵向时间线 + 可展开详情
+    │   ├── phase.css                # 阶段标题 + 叙事块样式
+    │   ├── table.css                # 活动当天流程表（RODS 表格）
+    │   ├── components.css           # 决策卡片、精选瞬间卡片、交付物、总览介绍
+    │   ├── reflection.css           # 复盘三列网格（做对了/待改进/改进方向）
+    │   ├── reveal.css               # Footer 揭开效果（双层页面容器）
+    │   ├── about.css                # Footer 活动卡片 + 鸣谢
+    │   ├── icons.css                # 导航栏图标按钮
+    │   └── responsive.css           # 响应式适配（1024/767/480/360 四级断点 + 横屏 + 安全区 + 打印）
+    ├── js/                          # 脚本（6 个，按职责拆分）
+    │   ├── main.js                  # 泳道图异步按钮交互
+    │   ├── reveal.js                # 页面滚动容器 + Footer 揭开效果 + RAF 缓动动画 + 锚点导航
+    │   ├── counter.js               # Hero 数字递增动画（IntersectionObserver 触发）
+    │   ├── theme.js                 # 深色/浅色主题管理器（CSS 变量注入 + localStorage）
+    │   ├── i18n.js                  # 中英文国际化（140+ 翻译键，localStorage 持久化）
+    │   └── scroll.js                # IntersectionObserver 滚动渐入 + 导航高亮跟踪
+    └── images/                      # 图片资源（3 张）
+        ├── scene-detail.jpg         # 活动现场
+        ├── scene-handbook.jpg       # 筹备日常
+        └── scene-venue.jpg          # 场地细节
 ```
 
 ---
@@ -124,7 +123,6 @@ trae_cugb/
 ## 🚀 本地运行
 
 ```bash
-cd for_trae
 python -m http.server 8080
 # 浏览器访问 http://localhost:8080/
 ```
@@ -132,14 +130,16 @@ python -m http.server 8080
 也可用任意静态文件服务器：
 
 ```bash
-npx serve for_trae
+npx serve .
 ```
 
 ---
 
 ## 🌐 部署
 
-GitHub Pages，Source 选择 `final` 分支，根目录 `/` 或 `/docs`。
+GitHub Pages，在仓库 Settings → Pages 中，Source 选择 `Deploy from a branch`，Branch 选择 `final`，目录选择 `/ (root)`，保存后自动部署。
+
+部署完成后即可通过 `https://VVOLLV.github.io/trae_on_cugb/` 访问。
 
 ---
 
@@ -150,23 +150,6 @@ GitHub Pages，Source 选择 `final` 分支，根目录 `/` 或 `/docs`。
 - **Vanilla JavaScript (ES6+)** — 零框架依赖，纯原生实现
 - **Google Fonts** — Inter + JetBrains Mono（`preconnect` 预连接优化）
 - **APIs** — IntersectionObserver、requestAnimationFrame、localStorage、MutationObserver
-
----
-
-## 🌟 量化成果
-
-- 🎯 **到场率**：62.5%（80 人报名，50 人到场）
-- ⭐ **满意度**：95% 参与者表示满意
-- 📈 **影响力**：覆盖校内 3 个院系
-
----
-
-## 🙏 特别鸣谢
-
-- **TRAE 运营团队** — 品牌授权、技术支持、场地协调
-- **中国地质大学（北京）** — 场地支持与学生组织协作
-- **校园大使（Quankun）** — 活动策划、执行与复盘
-- **所有参与者** — 共同创造精彩体验
 
 ---
 
